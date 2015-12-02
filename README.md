@@ -16,11 +16,21 @@ Packrat is a library for packaging common graphical data types.
 
 Packrat provides the following data type:
 
-* Vector2
-* Vector3
-* Vector4
-* Matrix
-* Quaternion
+* Alpha 8
+* BGR 5, 6, 5
+* BGRA 16
+* BGRA 5, 5, 5, 1
+* Byte 4
+* Normalised Byte 2
+* Normalised Byte 4
+* Normalised Short 2
+* Normalised Short 4
+* RG 32
+* RGBA 32
+* RGBA 64
+* RGBA 10, 10, 10, 2
+* Short 2
+* Short 4
 
 ## Getting Started
 
