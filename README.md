@@ -5,7 +5,6 @@ Packrat is a library for packaging common graphical data types.
 ## Packrat
 
 [![Build Status](https://travis-ci.org/sungiant/packrat.png?branch=master)](https://travis-ci.org/sungiant/packrat)
-[![Gitter](https://img.shields.io/badge/gitter-join%20chat-green.svg)](https://gitter.im/sungiant/packrat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/sungiant/packrat/master/LICENSE)
 [![Nuget Version](https://img.shields.io/nuget/v/Packrat.svg)](https://www.nuget.org/packages/Packrat)
 [![Nuget Downloads](https://img.shields.io/nuget/dt/Packrat.svg)](https://www.nuget.org/packages/Packrat)
