@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Packrat</id>
+    <title>Packrat</title>
+    <version>0.9.0</version>
+    <authors>Ash Pook</authors>
+    <owners>Ash Pook</owners>
+    <licenseUrl>https://raw.githubusercontent.com/sungiant/packrat/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/sungiant/packrat</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Graphical data type packing library.</description>
+    <copyright>Copyright 2015</copyright>
+    <tags>3D Maths Graphics Packing RGBA</tags>
+  </metadata>
+  <files>
+    <file src="bin/packrat.dll" target="lib" />
+    <file src="bin/packrat.xml" target="lib" />
+  </files>
+</package>

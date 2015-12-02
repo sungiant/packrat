@@ -1,0 +1,38 @@
+<#@ template debug="true" hostspecific="false" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+namespace Packrat.Tests
+{
+    using System;
+    using System.Globalization;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Reflection;
+    using System.Runtime.InteropServices;
+    using System.Runtime.ConstrainedExecution;
+    using NUnit.Framework;
+    using System.Runtime.CompilerServices;
+
+    static class Settings
+    {
+        internal const UInt32 NumTests = 10000;
+    }
+
+<#@ include file="Packed/Alpha8.Tests.t4"#>
+<#@ include file="Packed/Bgr_5_6_5.Tests.t4"#>
+<#@ include file="Packed/Bgra16.Tests.t4"#>
+<#@ include file="Packed/Bgra_5_5_5_1.Tests.t4"#>
+<#@ include file="Packed/Byte4.Tests.t4"#>
+<#@ include file="Packed/NormalisedByte2.Tests.t4"#>
+<#@ include file="Packed/NormalisedByte4.Tests.t4"#>
+<#@ include file="Packed/NormalisedShort2.Tests.t4"#>
+<#@ include file="Packed/NormalisedShort4.Tests.t4"#>
+<#@ include file="Packed/Rg32.Tests.t4"#>
+<#@ include file="Packed/Rgba32.Tests.t4"#>
+<#@ include file="Packed/Rgba64.Tests.t4"#>
+<#@ include file="Packed/Rgba_10_10_10_2.Tests.t4"#>
+<#@ include file="Packed/Short2.Tests.t4"#>
+<#@ include file="Packed/Short4.Tests.t4"#>
+}

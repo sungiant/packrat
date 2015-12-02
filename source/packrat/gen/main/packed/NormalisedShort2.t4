@@ -1,0 +1,38 @@
+﻿    [StructLayout (LayoutKind.Sequential), Serializable]
+    public struct NormalisedShort2
+        : IPackedValue<UInt32>
+        , IEquatable<NormalisedShort2>
+        , IPackedReal2
+    {
+        public override String ToString ()
+        {
+            return this.packedValue.ToString ("X8", CultureInfo.InvariantCulture);
+        }
+
+        static void Pack(Single zX, Single zY, out UInt32 zPackedXy)
+        {
+            if (zX < -1f || zX > 1f || zY < -1f || zY > 1f)
+            {
+                throw new ArgumentException ("A component of the input source is not normalised.");
+            }
+
+            UInt32 x = Utils.PackSignedNormalised(0xffff, zX);
+            UInt32 y = Utils.PackSignedNormalised(0xffff, zY) << 16;
+
+            zPackedXy = (x | y);
+        }
+
+        static void Unpack(UInt32 zPackedXy, out Single zX, out Single zY)
+        {
+            zX = Utils.UnpackSignedNormalised (0xffff, zPackedXy);
+            zY = Utils.UnpackSignedNormalised (0xffff, (UInt32) (zPackedXy >> 16));
+
+            if (zX < -1f || zX > 1f || zY < -1f || zY > 1f)
+            {
+                throw new Exception ("A the input source doesn't yeild a normalised output: " + zPackedXy);
+            }
+        }
+
+<#  GeneratePackedCommon("NormalisedShort2", "UInt32", "zPackedXy", new [] { "zX", "zY" }); #>
+    }
+

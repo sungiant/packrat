@@ -1,0 +1,42 @@
+﻿    [StructLayout (LayoutKind.Sequential), Serializable]
+    public struct Bgra_5_5_5_1
+        : IPackedValue<UInt16>
+        , IEquatable<Bgra_5_5_5_1>
+        , IPackedReal4
+    {
+        public override String ToString ()
+        {
+            return this.packedValue.ToString ("X4", CultureInfo.InvariantCulture);
+        }
+
+        static void Pack(Single zB, Single zG, Single zR, Single zA, out UInt16 zPackedBgra)
+        {
+            if (zR < 0f || zR > 1f || zG < 0f || zG > 1f || zB < 0f || zB > 1f || zA < 0f || zA > 1f )
+            {
+                throw new ArgumentException ("A component of the input source is not unsigned and normalised.");
+            }
+
+            UInt32 b = Utils.PackUnsignedNormalisedValue (31f, zB);
+            UInt32 g = Utils.PackUnsignedNormalisedValue (31f, zG) << 5;
+            UInt32 r = Utils.PackUnsignedNormalisedValue (31f, zR) << 10;
+            UInt32 a = Utils.PackUnsignedNormalisedValue (1f, zA) << 15;
+
+            zPackedBgra = (UInt16)(((r | g) | b) | a);
+        }
+
+        static void Unpack(UInt16 zPackedBgra, out Single zB, out Single zG, out Single zR, out Single zA)
+        {
+            zB = Utils.UnpackUnsignedNormalisedValue (0x1f, zPackedBgra);
+            zG = Utils.UnpackUnsignedNormalisedValue (0x1f, (UInt32)(zPackedBgra >> 5));
+            zR = Utils.UnpackUnsignedNormalisedValue (0x1f, (UInt32)(zPackedBgra >> 10));
+            zA = Utils.UnpackUnsignedNormalisedValue (1, (UInt32)(zPackedBgra >> 15));
+
+            if (zR < 0f || zR > 1f || zG < 0f || zG > 1f || zB < 0f || zB > 1f || zA < 0f || zA > 1f)
+            {
+                throw new Exception ("A the input source doesn't yeild an unsigned normalised output: " + zPackedBgra);
+            }
+        }
+
+<#  GeneratePackedCommon("Bgra_5_5_5_1", "UInt16", "zPackedBgra", new [] { "zB", "zG", "zR", "zA" }); #>
+    }
+
