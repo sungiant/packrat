@@ -9,10 +9,10 @@
 // │ Packrat is a library for packing graphical data types.                 │ \\
 // │                                                                        │ \\
 // ├────────────────────────────────────────────────────────────────────────┤ \\
-// │ Copyright © 2012 - 2015 ~ Blimey3D (http://www.blimey.io)              │ \\
+// │ Copyright © 2012 - 2015                                                │ \\
 // ├────────────────────────────────────────────────────────────────────────┤ \\
 // │ Authors:                                                               │ \\
-// │ ~ Ash Pook (http://www.ajpook.com)                                     │ \\
+// │ ~ Ash Pook (http://ash.blimey.io)                                      │ \\
 // ├────────────────────────────────────────────────────────────────────────┤ \\
 // │ Permission is hereby granted, free of charge, to any person obtaining  │ \\
 // │ a copy of this software and associated documentation files (the        │ \\
