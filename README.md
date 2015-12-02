@@ -14,7 +14,7 @@ Packrat is a library for packaging common graphical data types.
 
 Packrat is a library for packaging common graphical data types.
 
-Packrat provides the following data type:
+Packrat provides the following data types:
 
 * Alpha 8
 * BGR 5, 6, 5
