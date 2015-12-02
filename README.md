@@ -1,7 +1,3 @@
-[![Build Status](https://travis-ci.org/sungiant/packrat.png?branch=master)](https://travis-ci.org/sungiant/packrat)
-
-Packrat is a library for packaging common graphical data types.
-
 ## Packrat
 
 [![Build Status](https://travis-ci.org/sungiant/packrat.png?branch=master)](https://travis-ci.org/sungiant/packrat)
