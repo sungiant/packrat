@@ -4,6 +4,11 @@ void GeneratePackedCommon(string type, string packedType, string packedVariableN
 #>
         <#= packedType #> packedValue;
 
+        public <#= type #> (<#= packedType #> packedValue)
+        {
+            this.packedValue = packedValue;
+        }
+
 #region IPackedValue
 
         public <#= packedType #> PackedValue

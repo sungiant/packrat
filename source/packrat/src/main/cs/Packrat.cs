@@ -207,6 +207,11 @@ namespace Packrat
 
         Byte packedValue;
 
+        public Alpha_8 (Byte packedValue)
+        {
+            this.packedValue = packedValue;
+        }
+
 #region IPackedValue
 
         public Byte PackedValue
@@ -300,6 +305,11 @@ namespace Packrat
         }
 
         UInt16 packedValue;
+
+        public Bgr_5_6_5 (UInt16 packedValue)
+        {
+            this.packedValue = packedValue;
+        }
 
 #region IPackedValue
 
@@ -397,6 +407,11 @@ namespace Packrat
 
         UInt16 packedValue;
 
+        public Bgra16 (UInt16 packedValue)
+        {
+            this.packedValue = packedValue;
+        }
+
 #region IPackedValue
 
         public UInt16 PackedValue
@@ -493,6 +508,11 @@ namespace Packrat
 
         UInt16 packedValue;
 
+        public Bgra_5_5_5_1 (UInt16 packedValue)
+        {
+            this.packedValue = packedValue;
+        }
+
 #region IPackedValue
 
         public UInt16 PackedValue
@@ -577,6 +597,11 @@ namespace Packrat
         }
 
         UInt32 packedValue;
+
+        public Byte4 (UInt32 packedValue)
+        {
+            this.packedValue = packedValue;
+        }
 
 #region IPackedValue
 
@@ -669,6 +694,11 @@ namespace Packrat
         }
 
         UInt16 packedValue;
+
+        public NormalisedByte2 (UInt16 packedValue)
+        {
+            this.packedValue = packedValue;
+        }
 
 #region IPackedValue
 
@@ -766,6 +796,11 @@ namespace Packrat
 
         UInt32 packedValue;
 
+        public NormalisedByte4 (UInt32 packedValue)
+        {
+            this.packedValue = packedValue;
+        }
+
 #region IPackedValue
 
         public UInt32 PackedValue
@@ -857,6 +892,11 @@ namespace Packrat
         }
 
         UInt32 packedValue;
+
+        public NormalisedShort2 (UInt32 packedValue)
+        {
+            this.packedValue = packedValue;
+        }
 
 #region IPackedValue
 
@@ -954,6 +994,11 @@ namespace Packrat
 
         UInt64 packedValue;
 
+        public NormalisedShort4 (UInt64 packedValue)
+        {
+            this.packedValue = packedValue;
+        }
+
 #region IPackedValue
 
         public UInt64 PackedValue
@@ -1044,6 +1089,11 @@ namespace Packrat
         }
 
         UInt32 packedValue;
+
+        public Rg32 (UInt32 packedValue)
+        {
+            this.packedValue = packedValue;
+        }
 
 #region IPackedValue
 
@@ -1140,6 +1190,11 @@ namespace Packrat
         }
 
         UInt32 packedValue;
+
+        public Rgba32 (UInt32 packedValue)
+        {
+            this.packedValue = packedValue;
+        }
 
 #region IPackedValue
 
@@ -1261,6 +1316,11 @@ namespace Packrat
 
         UInt64 packedValue;
 
+        public Rgba64 (UInt64 packedValue)
+        {
+            this.packedValue = packedValue;
+        }
+
 #region IPackedValue
 
         public UInt64 PackedValue
@@ -1358,6 +1418,11 @@ namespace Packrat
 
         UInt32 packedValue;
 
+        public Rgba_10_10_10_2 (UInt32 packedValue)
+        {
+            this.packedValue = packedValue;
+        }
+
 #region IPackedValue
 
         public UInt32 PackedValue
@@ -1439,6 +1504,11 @@ namespace Packrat
         }
 
         UInt32 packedValue;
+
+        public Short2 (UInt32 packedValue)
+        {
+            this.packedValue = packedValue;
+        }
 
 #region IPackedValue
 
@@ -1526,6 +1596,11 @@ namespace Packrat
         }
 
         UInt64 packedValue;
+
+        public Short4 (UInt64 packedValue)
+        {
+            this.packedValue = packedValue;
+        }
 
 #region IPackedValue
 
