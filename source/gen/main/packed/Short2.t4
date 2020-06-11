@@ -1,0 +1,22 @@
+﻿    [StructLayout (LayoutKind.Sequential), Serializable]
+    public struct Short2
+        : IPackedValue<UInt32>, IEquatable<Short2>, IPackedReal2
+    {
+        public override String      ToString        () { return packedValue.ToString ("X8"); }
+<#  GeneratePackedCommon ("Short2", "UInt32", "zPackedXy", new [] { "zX", "zY" }); #>
+
+        public static void Pack (Single zX, Single zY, out UInt32 zPackedXy) {
+            UInt32 x = Utils.PackSigned (0xffff, zX);
+            UInt32 y = Utils.PackSigned (0xffff, zY) << 16;
+
+            zPackedXy = (x | y);
+        }
+
+        public static void Unpack (UInt32 zPackedXy, out Single zX, out Single zY) {
+            zX = (Int16) zPackedXy;
+            zY = (Int16) (zPackedXy >> 16);
+        }
+
+        UInt32 packedValue;
+    }
+

@@ -3,10 +3,10 @@
   <metadata>
     <id>Packrat</id>
     <title>Packrat</title>
-    <version>0.9.1</version>
+    <version>1.0.0</version>
     <authors>Ash Pook</authors>
     <owners>Ash Pook</owners>
-    <licenseUrl>https://raw.githubusercontent.com/sungiant/packrat/master/LICENSE</licenseUrl>
+    <license>https://raw.githubusercontent.com/sungiant/packrat/master/LICENSE</license>
     <projectUrl>https://github.com/sungiant/packrat</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Graphical data type packing library.</description>

@@ -11,34 +11,49 @@ Packrat is a library for packaging common graphical data types.
 
 Packrat provides the following data types:
 
-* Alpha 8
-* BGR 5, 6, 5
-* BGRA 16
-* BGRA 5, 5, 5, 1
-* Byte 4
-* Normalised Byte 2
-* Normalised Byte 4
-* Normalised Short 2
-* Normalised Short 4
-* RG 32
-* RGBA 32
-* RGBA 64
-* RGBA 10, 10, 10, 2
-* Short 2
-* Short 4
+* `Alpha 8`
+* `BGR 5, 6, 5`
+* `BGRA 16`
+* `BGRA 5, 5, 5, 1`
+* `Byte 4`
+* `Normalised Byte 2`
+* `Normalised Byte 4`
+* `Normalised Short 2`
+* `Normalised Short 4`
+* `RG 32`
+* `RGBA 32`
+* `RGBA 64`
+* `RGBA 10, 10, 10, 2`
+* `Short 2`
+* `Short 4`
 
 ## Getting Started
 
 Packrat is available as a stand-alone library via **[nuget][packrat_nuget]**.  Here's an example nuget `packages.config` file that pulls in Packrat:
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <packages>
-  <package id="Packrat" version="0.9.0" targetFramework="net45" />
+  <package id="Packrat" version="1.0.0" targetFramework="net45" />
 </packages>
 ```
 
-Alternatively, given that all code is generated into a single source file, it is easy to simply copy the [Packrat.cs][sources] file straight into your project.
+Alternatively, given that all code is generated into a single source file, it is easy to simply copy the [Packrat.cs][source] file straight into your project.
+
+## Example Usage
+
+```cs
+
+float r = 0.392f;
+float g = 0.584f;
+float b = 0.929f;
+float a = 1.0f;
+
+uint  colour     = new Rgba32   (r, g, b, a).PackedValue;
+uint  colour5551 = new Rgba64   (r, g, b, a).PackedValue;
+ulong colour64   = new Bgra5551 (r, g, b, a).PackedValue;
+
+```
 
 ## License
 
@@ -46,4 +61,4 @@ Packrat is licensed under the **[MIT License][mit]**; you may not use this softw
 
 [mit]: /LICENSE
 [packrat_nuget]: https://www.nuget.org/packages/Packrat/
-[sources]: https://github.com/sungiant/packrat/tree/master/source/packrat/src/main/cs
+[source]: https://github.com/sungiant/packrat/tree/master/source/src/Packrat.cs

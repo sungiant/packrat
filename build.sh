@@ -13,7 +13,7 @@ mcs \
 -define:DEBUG \
 -out:bin/packrat.dll \
 -target:library \
--recurse:source/packrat/src/main/cs/*.cs \
+-recurse:source/src/Packrat.cs \
 /doc:bin/packrat.xml \
 -lib:bin/
 
@@ -23,7 +23,7 @@ mcs \
 -define:DEBUG \
 -out:bin/packrat.test.dll \
 -target:library \
--recurse:source/packrat/src/test/cs/*.cs \
+-recurse:source/src/Packrat.Tests.cs \
 -lib:bin/ \
 -lib:packages/NUnit.2.6.4/lib \
 -reference:packrat.dll \

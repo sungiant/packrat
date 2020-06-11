@@ -1,0 +1,4 @@
+﻿    public interface IPackedValue<T> {
+        T PackedValue { get; set; }
+    }
+

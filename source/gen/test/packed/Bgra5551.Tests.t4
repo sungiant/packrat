@@ -1,0 +1,47 @@
+﻿    // Tests the Bgra5551 packed data type.
+    [TestFixture]
+    public class Bgra5551Tests
+    {
+        // Iterates over every possible Bgra5551 value and makes sure that
+        // unpacking them and then re-packing that result yields the
+        // original packed value.
+        [Test]
+        public void TestAllPossibleValues_i () {
+            UInt16 packed = UInt16.MinValue;
+            while (packed < UInt16.MaxValue) {
+                ++packed;
+                var packedObj = new Bgra5551 ();
+                packedObj.PackedValue = packed;
+                Single realB, realG, realR, realA = 0f;
+                packedObj.UnpackTo (out realB, out realG, out realR, out realA);
+                var newPackedObj = new Bgra5551 (realB, realG, realR, realA);
+                Assert.That (newPackedObj.PackedValue, Is.EqualTo (packed));
+            }
+        }
+
+        // For a given example, this test ensures that the ToString function
+        // yields the expected string.
+        [Test]
+        public void TestMemberFn_ToString_i () {
+            var testCase = new Bgra5551 ();
+            testCase.PackFrom (0.222f, 0.125f, 0.656f, 0.861f);
+            String s = testCase.ToString ();
+            Assert.That (s, Is.EqualTo ("D087"));
+        }
+
+        // Makes sure that the hashing function is good by testing
+        // all scenarios and ensuring that there are no collisions.
+        [Test]
+        public void TestMemberFn_GetHashCode_i () {
+            HashSet<Int32> hs = new HashSet<Int32>();
+            UInt16 packed = UInt16.MinValue;
+            while (packed < UInt16.MaxValue) {
+                ++packed;
+                var packedObj = new Bgra5551 ();
+                packedObj.PackedValue = packed;
+                Int32 hc = packedObj.GetHashCode ();
+                Assert.That (!hs.Contains (hc));
+                hs.Add (hc);
+            }
+        }
+    }
