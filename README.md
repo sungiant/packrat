@@ -1,9 +1,9 @@
 # Packrat :rat: 
 
-[![Build Status](https://travis-ci.org/sungiant/packrat.png?branch=master)](https://travis-ci.org/sungiant/packrat)
-[![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)][mit]
-[![Nuget Version](https://img.shields.io/nuget/v/Packrat.svg)][packrat_nuget]
-[![Nuget Downloads](https://img.shields.io/nuget/dt/Packrat.svg)][packrat_nuget]
+[![Build Status](https://img.shields.io/travis/sungiant/packrat)](https://travis-ci.org/sungiant/packrat)
+[![License](https://img.shields.io/github/license/sungiant/packrat)][mit]
+[![Nuget Version](https://img.shields.io/nuget/v/Packrat)][packrat_nuget]
+[![Nuget Downloads](https://img.shields.io/nuget/dt/Packrat)][packrat_nuget]
 
 ## Overview
 
